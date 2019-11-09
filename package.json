@@ -1,0 +1,27 @@
+{
+  "name": "gatsby-starter-default",
+  "private": true,
+  "description": "",
+  "version": "0.1.0",
+  "author": "Jorn Luiten",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "scripts": {
+    "start": "gatsby develop",
+    "build": "gatsby build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gatsby": "^2.17.11",
+    "gatsby-plugin-no-javascript": "^2.0.5",
+    "gatsby-plugin-root-import": "^2.0.5",
+    "gatsby-plugin-styled-components": "^3.1.13",
+    "prettier": "^1.19.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "styled-components": "^4.4.1"
+  }
+}
