@@ -1,6 +1,33 @@
 import { createGlobalStyle } from 'styled-components'
+import mq from 'theme/mediaQueries'
 
 export default createGlobalStyle`
+  /* ===== DEV ===== */
+  body::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    color: red;
+  }
+
+  ${mq.sm`
+    body::before {
+      content: 'SM';
+    }
+  `}
+  ${mq.md`
+    body::before {
+      content: 'MD';
+    }
+  `}
+  ${mq.lg`
+    body::before {
+      content: 'LG';
+    }
+  `}
+  /* ===== END DEV ===== */
+
   html {
     font-size: 13pt;
   }
@@ -19,6 +46,10 @@ export default createGlobalStyle`
 
   ::selection {
     background-color: rgba(100, 190, 50, 0.2);
+  }
+
+  *:focus {
+    outline: 1px solid rgb(100, 190, 50);
   }
 
   p {

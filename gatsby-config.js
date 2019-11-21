@@ -14,6 +14,7 @@ const aliases = getDirectories(path.join(__dirname, 'src')).reduce((acc, dir) =>
 module.exports = {
   plugins: [
     'gatsby-plugin-root-import',
+    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-root-import',
       options: aliases,

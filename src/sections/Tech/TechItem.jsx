@@ -3,9 +3,27 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const Item = styled.li`
-  flex: 1 1 0;
-  min-width: 128px;
-  margin-bottom: 2rem;
+  min-width: 128px; /* For non-grid supporting browsers */
+  @supports (grid-template-columns: 1fr) {
+    min-width: auto;
+  }
+
+  margin-bottom: 1rem;
+  text-align: center;
+`
+
+const FocusElement = styled.button`
+  border: none;
+  background: transparent;
+
+  figcaption {
+    visibility: hidden;
+  }
+
+  &:focus figcaption,
+  &:hover figcaption {
+    visibility: visible;
+  }
 `
 
 const Card = styled.figure`
@@ -26,12 +44,12 @@ const TechItem = props => {
 
   return (
     <Item>
-      <a href="tech/html.html">
+      <FocusElement>
         <Card>
           <img src={image} alt={imageAlt} />
           <figcaption>{name}</figcaption>
         </Card>
-      </a>
+      </FocusElement>
     </Item>
   )
 }
