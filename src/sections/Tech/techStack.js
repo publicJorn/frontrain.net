@@ -55,6 +55,11 @@ export default [
     imageAlt: 'Webpack icon',
   },
   {
+    name: 'Code quality',
+    image: 'images/eslint.svg',
+    imageAlt: 'Eslint icon',
+  },
+  {
     name: 'Docker',
     image: 'images/docker.svg',
     imageAlt: 'Docker icon',
@@ -65,8 +70,23 @@ export default [
     imageAlt: 'Git icon',
   },
   {
+    name: 'Gitlab/-hub CI/CD',
+    image: 'images/gitlabhub.svg',
+    imageAlt: 'Gitlab-hub icon',
+  },
+  {
     name: 'Agile methods',
-    image: 'images/kanban.svg',
+    image: 'images/agile.svg',
     imageAlt: 'Kanban icon',
+  },
+  {
+    name: 'Accessibility',
+    image: 'images/w3c.svg',
+    imageAlt: 'W3c icon',
+  },
+  {
+    name: 'Optimization',
+    image: 'images/lighthouse.svg',
+    imageAlt: 'Lighthouse icon',
   },
 ]

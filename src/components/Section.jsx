@@ -18,4 +18,11 @@ export default styled.section`
       margin: 2rem auto;
     }
   `}
+
+  /* Clear any floats */
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 `

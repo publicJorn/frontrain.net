@@ -14,30 +14,27 @@ const ColIntroImage = styled(Col)`
 `
 
 const Image = styled.img`
-  display: block;
-  margin: 1rem 0;
+  float: left;
+  margin: 0 1rem 0 0;
+  max-width: 10rem;
 
   ${mq.sm`
     & {
-      max-width: 10rem;
+      display: block;
+      float: none;
+      margin: 0 auto 1rem;
     }
   `}
 `
 
 export default () => (
   <Section>
-    <Row>
-      <ColIntroImage className="col-sm-4 col-up-2">
-        <Image src={imgJorn} alt="Jorn Luiten - frontend developer" />
-      </ColIntroImage>
+    <Image src={imgJorn} alt="Jorn Luiten - frontend developer" />
 
-      <Col className="col-sm-8 col-up-10">
-        <p>
-          Hi, I'm Jorn. I build rich web experiences.
-          <br />
-          Using modern tech and an efficient workflow I can help make your product awesome.
-        </p>
-      </Col>
-    </Row>
+    <p>
+      Hi, I'm Jorn. I build rich web experiences.
+      <br />
+      Using modern tech and an efficient workflow I can help make your product awesome.
+    </p>
   </Section>
 )

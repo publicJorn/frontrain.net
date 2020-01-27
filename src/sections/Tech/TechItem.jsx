@@ -2,8 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+export const itemMinWidth = 128
+
 const Item = styled.li`
-  min-width: 128px; /* For non-grid supporting browsers */
+  min-width: ${itemMinWidth}px; /* For non-grid supporting browsers */
   @supports (grid-template-columns: 1fr) {
     min-width: auto;
   }

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import techStack from './techStack'
 import Section from 'components/Section'
-import TechItem from './TechItem'
+import TechItem, { itemMinWidth } from './TechItem'
 
 const TechList = styled.ul`
   /* For older browsers */
@@ -19,20 +19,21 @@ const TechList = styled.ul`
     /* Using custom width, else there's a short span where there's 2 hor icons instead of 3 */
     @media (min-width: 460px) {
       & {
-        grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(${itemMinWidth}px, 1fr));
       }
     }
   }
 
   list-style: none;
   padding: 0;
-  margin-top: 2rem;
+  max-width: ${itemMinWidth * 6}px;
+  margin: 2rem auto -1rem; /* Negate last row items' padding */
 `
 
 export default () => (
   <Section>
     <p>
-      Each project is special and has it's own requirements. Here's some of the techniques and
+      Each project is special and has its own requirements. Here's some of the techniques and
       methodologies I use regularly:
     </p>
 
