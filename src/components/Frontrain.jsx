@@ -5,4 +5,4 @@ const Frontrain = styled.span`
   font-family: 'Press Start 2P', monospace;
 `
 
-export default props => <Frontrain {...props}>frontrain</Frontrain>
+export default (props) => <Frontrain {...props}>frontrain</Frontrain>

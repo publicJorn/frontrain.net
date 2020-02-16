@@ -10,19 +10,38 @@
   },
   "scripts": {
     "start": "gatsby develop",
-    "build": "gatsby build"
+    "build": "gatsby build",
+    "lint": "eslint src/**/*.{js,jsx} --fix"
   },
-  "dependencies": {},
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.10.6",
-    "gatsby": "^2.17.11",
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-styled-components": "^1.10.7",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "gatsby": "^2.19.8",
     "gatsby-plugin-no-javascript": "^2.0.5",
+    "gatsby-plugin-portal": "^1.0.7",
     "gatsby-plugin-root-import": "^2.0.5",
-    "gatsby-plugin-styled-components": "^3.1.13",
+    "gatsby-plugin-styled-components": "^3.1.18",
+    "gatsby-source-filesystem": "^2.1.46",
+    "gatsby-transformer-remark": "^2.6.48",
     "prettier": "^1.19.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "styled-components": "^4.4.1"
+    "prop-types": "15.7.2",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "styled-components": "5.0.0"
+  },
+  "dependencies": {
+    "react-focus-on": "^3.3.0"
   }
 }

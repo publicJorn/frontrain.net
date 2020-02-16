@@ -15,16 +15,29 @@ const Item = styled.li`
 `
 
 const FocusElement = styled.button`
+  position: relative;
+  padding-bottom: 2rem;
   border: none;
   background: transparent;
 
   figcaption {
-    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    padding: 0 0.5rem;
+    white-space: nowrap;
+    outline: 1px solid rgb(100, 190, 50);
+    background-color: white;
+    transform: scale(0) translate(0, -1rem);
+    transition: transform 150ms ease-in-out;
   }
 
-  &:focus figcaption,
-  &:hover figcaption {
-    visibility: visible;
+  &:focus, &:hover {
+    outline: none;
+    figcaption {
+      visibility: visible;
+      transform: scale(1) translate(0, 0);
+    }
   }
 `
 

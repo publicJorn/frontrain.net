@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 import mq from 'theme/mediaQueries'
 
+import './normalize.css'
+
 export default createGlobalStyle`
   /* ===== DEV ===== */
   body::before {
@@ -28,24 +30,30 @@ export default createGlobalStyle`
   `}
   /* ===== END DEV ===== */
 
+  *, ::before, ::after {
+    box-sizing: border-box;
+  }
+
   html {
-    font-size: 13pt;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 14pt;
+    line-height: 1.8;
   }
 
   @media (min-width: 420px) {
     html {
-      font-size: 14pt;
+      font-size: 15pt;
     }
   }
 
   body {
+    position: relative;
     min-width: 310px;
-    font-family: verdana, sans-serif;
-    color: rgb(58, 58, 58);
+    color: ${(p) => p.theme.colors.text};
   }
 
   ::selection {
-    background-color: rgba(100, 190, 50, 0.2);
+    background-color: ${(p) => p.theme.brandLight};
   }
 
   *:focus {
@@ -53,18 +61,14 @@ export default createGlobalStyle`
   }
 
   p {
-    line-height: 1.8;
-  }
-
-  @media (max-width: 419px) {
-    p {
-      margin-top: 0;
-    }
+    font-size: 1rem;
+    margin: 1rem 0;
   }
 
   a {
     font-family: monospace;
-    color: rgb(58, 58, 58);
+    font-size: 0.95rem;
+    color: ${(p) => p.theme.colors.brand};
   }
 
   img {

@@ -2,7 +2,7 @@ import { css } from 'styled-components'
 
 import themeConstants from './themeConstants'
 
-const breakpoints = themeConstants.mediaQueryBreakpoints
+const { breakpoints } = themeConstants
 const keys = Object.keys(breakpoints)
 const step = 5
 
@@ -15,7 +15,7 @@ const step = 5
  *
  * @param {string} key
  */
-export const up = key => `@media (min-width: ${breakpoints[key]}px)`
+export const up = (key) => `@media (min-width: ${breakpoints[key]}px)`
 
 /**
  * One unit less than next key
@@ -23,7 +23,7 @@ export const up = key => `@media (min-width: ${breakpoints[key]}px)`
  *
  * @param {string} key
  */
-export const down = key => {
+export const down = (key) => {
   const nextKey = keys[keys.indexOf(key) + 1]
 
   // down('xl') equals up('xs')
@@ -38,7 +38,7 @@ export const down = key => {
  *
  * @param {string} key
  */
-export const only = key => {
+export const only = (key) => {
   const nextKey = keys[keys.indexOf(key) + 1]
 
   // only('xl') equals up('xl')

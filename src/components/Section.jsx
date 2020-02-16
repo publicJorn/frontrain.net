@@ -4,7 +4,7 @@ import mq from 'theme/mediaQueries'
 export default styled.section`
   margin: 1rem auto;
   padding: 0 1rem;
-  max-width: 960px;
+  max-width: ${(p) => p.theme.maxSectionWidth};
   text-align: justify;
 
   ${mq.md`

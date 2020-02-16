@@ -43,8 +43,8 @@ export default function HTML(props) {
         <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=1" />
         <meta name="theme-color" content="#ffffff" />
 
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
-        <link href="https://necolas.github.io/normalize.css/3.0.2/normalize.css" rel="stylesheet" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>

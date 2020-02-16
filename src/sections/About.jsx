@@ -3,15 +3,14 @@ import styled from 'styled-components'
 
 import mq from 'theme/mediaQueries'
 import Section from 'components/Section'
-import Row from 'components/Row'
-import Col from 'components/Col'
+// import Col from 'components/Col'
 
 import imgJorn from 'images/jorn-luiten-frontend-developer.jpg'
 
-const ColIntroImage = styled(Col)`
-  align-self: center;
-  text-align: center;
-`
+// const ColIntroImage = styled(Col)`
+//   align-self: center;
+//   text-align: center;
+// `
 
 const Image = styled.img`
   float: left;
@@ -32,9 +31,10 @@ export default () => (
     <Image src={imgJorn} alt="Jorn Luiten - frontend developer" />
 
     <p>
-      Hi, I'm Jorn. I build rich web experiences.
+      Hi, I&apos;m Jorn. I build rich web experiences.
       <br />
-      Using modern tech and an efficient workflow I can help make your product awesome.
+      Using modern tech and an efficient workflow I can help make your product
+      awesome.
     </p>
   </Section>
 )

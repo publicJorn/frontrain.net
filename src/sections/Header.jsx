@@ -10,13 +10,13 @@ const Header = styled.header`
     margin: 1rem 0;
     font-size: 1.8rem;
     font-weight: bold;
-    color: rgb(72, 169, 0);
+    color: ${(p) => p.theme.colors.brand};
   }
 
   & .tagline {
     padding: 1rem;
     font-size: 0.8rem;
-    background-color: rgba(100, 190, 50, 0.2);
+    background-color: ${(p) => p.theme.colors.brandLight};
   }
 
   @media (min-width: 420px) {

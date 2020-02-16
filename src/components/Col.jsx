@@ -1,36 +1,45 @@
-import styled from 'styled-components'
-import mq from 'theme/mediaQueries'
+import React from 'react'
+import PropTypes from 'prop-types'
+import { withTheme } from 'styled-components'
 
-export default styled.div`
-  padding: 0 1rem;
+const defaultBreakpoints = {
+  xs: 0, // mobile
+  sm: 576, // mobile landscape
+  md: 768, // tablets
+  lg: 992, // Wide
+}
 
-  ${mq.md`
-    &.col-sm-1 { width: calc(100% / 12); }
-    &.col-sm-2 { width: calc(100% / 12 * 2); }
-    &.col-sm-3 { width: calc(100% / 12 * 3); }
-    &.col-sm-4 { width: calc(100% / 12 * 4); }
-    &.col-sm-5 { width: calc(100% / 12 * 5); }
-    &.col-sm-6 { width: calc(100% / 12 * 6); }
-    &.col-sm-7 { width: calc(100% / 12 * 7); }
-    &.col-sm-8 { width: calc(100% / 12 * 8); }
-    &.col-sm-9 { width: calc(100% / 12 * 9); }
-    &.col-sm-10 { width: calc(100% / 12 * 10); }
-    &.col-sm-11 { width: calc(100% / 12 * 11); }
-    &.col-sm-12 { width: 100%; }
-  `}
+const Col = ({ theme, width, children, ...props }) => {
+  if (!theme.breakpoints) {
+    console.warn('`theme.breakpoints` not found. Using default values.')
+  }
 
-  ${mq.lg`
-    &.col-up-1 { width: calc(100% / 12); }
-    &.col-up-2 { width: calc(100% / 12 * 2); }
-    &.col-up-3 { width: calc(100% / 12 * 3); }
-    &.col-up-4 { width: calc(100% / 12 * 4); }
-    &.col-up-5 { width: calc(100% / 12 * 5); }
-    &.col-up-6 { width: calc(100% / 12 * 6); }
-    &.col-up-7 { width: calc(100% / 12 * 7); }
-    &.col-up-8 { width: calc(100% / 12 * 8); }
-    &.col-up-9 { width: calc(100% / 12 * 9); }
-    &.col-up-10 { width: calc(100% / 12 * 10); }
-    &.col-up-11 { width: calc(100% / 12 * 11); }
-    &.col-sm-12 { width: 100%; }
-  `}
-`
+  const breakpoints = theme.breakpoints || defaultBreakpoints
+  let colWidth
+
+  const widthStyles = Object.values(breakpoints).map((minWidth, i) => {
+    if (width[i]) colWidth = width[i]
+    return `@media (min-width: ${minWidth}px){ width: ${colWidth * 100}%; }`
+  })
+
+  const colCss = `
+    padding: 0 1rem;
+    ${widthStyles.join('\n')}
+  `
+
+  return (
+    <div {...props} css={colCss}>
+      {children}
+    </div>
+  )
+}
+
+Col.propTypes = {
+  width: PropTypes.arrayOf(PropTypes.number).isRequired,
+}
+
+Col.defaultProps = {
+  width: [1],
+}
+
+export default withTheme(Col)

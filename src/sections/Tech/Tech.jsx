@@ -32,9 +32,10 @@ const TechList = styled.ul`
 
 export default () => (
   <Section>
+    <h2>Tech stack</h2>
     <p>
-      Each project is special and has its own requirements. Here's some of the techniques and
-      methodologies I use regularly:
+      Elk project is bijzonder en heeft zijn eigen benodigdheden. 
+      Hieronder een aantal methodes en technieken die ik regelmatig toepas.
     </p>
 
     <TechList>

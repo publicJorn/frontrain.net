@@ -8,11 +8,15 @@ const Footer = styled(Section)`
   font-family: monospace;
 `
 
+const Link = styled.a`
+  color: ${(p) => p.theme.colors.text};
+`
+
 export default () => (
   <Footer>
     <Frontrain />
     <br />
-    <a href="https://nl.linkedin.com/in/jornluiten">linkedIn</a>
+    <Link href="https://nl.linkedin.com/in/jornluiten">linkedIn</Link>
     <br />
     Chamber of Commerce (KvK) nr: 64846156
   </Footer>
