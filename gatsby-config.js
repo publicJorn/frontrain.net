@@ -31,6 +31,5 @@ module.exports = {
     },
     'gatsby-transformer-remark',
     'gatsby-plugin-portal',
-    'gatsby-plugin-no-javascript/',
   ],
 }
