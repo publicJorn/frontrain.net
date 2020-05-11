@@ -15,5 +15,6 @@ export default {
     brandLight: 'rgb(226, 242, 217)',
 
     text: 'rgb(68, 68, 68)',
+    link: 'rgb(57, 135, 0)',
   },
 }

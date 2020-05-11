@@ -9,6 +9,8 @@ import imgJorn from 'images/me.png'
 const Image = styled.img`
   float: left;
   margin: 0 2rem 0 0;
+  width: 200px;
+  height: 231px;
   max-width: 10rem;
 
   ${mq.sm`

@@ -82,7 +82,7 @@ export default createGlobalStyle`
   a {
     font-family: monospace;
     font-size: 0.95rem;
-    color: ${(p) => p.theme.colors.brand};
+    color: ${(p) => p.theme.colors.link};
   }
 
   img {

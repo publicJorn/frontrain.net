@@ -7,11 +7,14 @@ import data from './data'
 // Extracted because react-helmet was outdated (threw warnings) and the unnecessary noscript tag
 export default function HTML(props) {
   return (
-    <html {...props.htmlAttributes}>
+    <html lang="nl" {...props.htmlAttributes}>
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
 
         <meta name="title" content={data.title} />
         <meta name="description" content={data.description} />
@@ -21,7 +24,11 @@ export default function HTML(props) {
         <meta name="og:url" content="http://frontrain.net" />
         {/* <meta name="og:image" content="" /> */}
 
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=1" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png?v=1"
+        />
         <link
           rel="icon"
           type="image/png"
@@ -35,22 +42,50 @@ export default function HTML(props) {
           href="static/favicon/favicon-16x16.png?v=1"
         />
         <link rel="manifest" href="/favicon/site.webmanifest?v=1" />
-        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=1" color="#5ab52c" />
+        <link
+          rel="mask-icon"
+          href="/favicon/safari-pinned-tab.svg?v=1"
+          color="#5ab52c"
+        />
         <link rel="shortcut icon" href="/favicon/favicon.ico?v=1" />
-        <meta name="apple-mobile-web-app-title" content="frontrain - frontend web development" />
-        <meta name="application-name" content="frontrain - frontend web development" />
+        <meta
+          name="apple-mobile-web-app-title"
+          content="frontrain - frontend web development"
+        />
+        <meta
+          name="application-name"
+          content="frontrain - frontend web development"
+        />
         <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=1" />
+        <meta
+          name="msapplication-config"
+          content="/favicon/browserconfig.xml?v=1"
+        />
         <meta name="theme-color" content="#ffffff" />
+        <title>
+          frontrain - Freelance frontend web- en mobile app development door
+          Jorn Luiten
+        </title>
 
-        <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
-        <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: props.body }} />
+        <div
+          key={`body`}
+          id="___gatsby"
+          dangerouslySetInnerHTML={{ __html: props.body }}
+        />
         {props.postBodyComponents}
+
+        <link
+          href="https://fonts.googleapis.com/css?family=Titillium+Web"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+          rel="stylesheet"
+        />
       </body>
     </html>
   )
