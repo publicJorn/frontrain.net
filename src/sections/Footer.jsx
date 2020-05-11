@@ -21,6 +21,6 @@ export default () => (
     <br />
     <Link href="https://nl.linkedin.com/in/jornluiten">linkedIn</Link>
     <br />
-    Chamber of Commerce (KvK) nr: 64846156
+    KvK: 64846156
   </Footer>
 )
