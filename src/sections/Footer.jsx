@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Section from 'components/Section'
+import SectionTitle from 'components/SectionTitle'
 import Frontrain from 'components/Frontrain'
 
 const Footer = styled(Section)`
@@ -14,7 +15,9 @@ const Link = styled.a`
 
 export default () => (
   <Footer>
-    <Frontrain />
+    <SectionTitle>
+      <Frontrain />
+    </SectionTitle>
     <br />
     <Link href="https://nl.linkedin.com/in/jornluiten">linkedIn</Link>
     <br />

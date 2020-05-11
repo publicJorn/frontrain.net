@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import techStack from './techStack'
 import Section from 'components/Section'
+import SectionTitle from 'components/SectionTitle'
 import TechItem, { itemMinWidth } from './TechItem'
 
 const TechList = styled.ul`
@@ -32,14 +33,14 @@ const TechList = styled.ul`
 
 export default () => (
   <Section>
-    <h2>Tech stack</h2>
+    <SectionTitle>Tech stack</SectionTitle>
     <p>
-      Elk project is bijzonder en heeft zijn eigen benodigdheden. 
-      Hieronder een aantal methodes en technieken die ik regelmatig toepas.
+      Elk project is bijzonder en heeft zijn eigen benodigdheden. Hieronder een
+      aantal methodes en technieken die ik regelmatig toepas.
     </p>
 
     <TechList>
-      {techStack.map(tech => (
+      {techStack.map((tech) => (
         <TechItem key={tech.name} tech={tech} />
       ))}
     </TechList>

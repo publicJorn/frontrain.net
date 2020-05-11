@@ -38,7 +38,6 @@ const Header = styled.header`
   }
 
   & .jorn {
-    font-weight: bold;
     white-space: nowrap;
   }
 `
@@ -47,7 +46,7 @@ export default () => (
   <Header>
     <Frontrain as="h1" className="title" />
     <p className="tagline">
-      Freelance front-end web development and consultancy by{' '}
+      Freelance frontend web- en mobile app development door{' '}
       <span className="jorn">Jorn Luiten</span>
     </p>
   </Header>

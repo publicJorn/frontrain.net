@@ -26,13 +26,14 @@ const FocusElement = styled.button`
     z-index: 1;
     padding: 0 0.5rem;
     white-space: nowrap;
-    outline: 1px solid rgb(100, 190, 50);
+    outline: 1px solid ${(p) => p.theme.colors.focus};
     background-color: white;
     transform: scale(0) translate(0, -1rem);
     transition: transform 150ms ease-in-out;
   }
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     outline: none;
     figcaption {
       visibility: visible;
@@ -54,7 +55,7 @@ const Card = styled.figure`
   }
 `
 
-const TechItem = props => {
+const TechItem = (props) => {
   const { name, image, imageAlt } = props.tech
 
   return (

@@ -25,6 +25,11 @@ export default [
     imageAlt: 'NodeJS icon',
   },
   {
+    name: 'Flutter',
+    image: 'images/flutter.svg',
+    imageAlt: 'Flutter icon',
+  },
+  {
     name: 'React',
     image: 'images/react.svg',
     imageAlt: 'React icon',
@@ -55,11 +60,6 @@ export default [
     imageAlt: 'Webpack icon',
   },
   {
-    name: 'Code quality',
-    image: 'images/eslint.svg',
-    imageAlt: 'Eslint icon',
-  },
-  {
     name: 'Docker',
     image: 'images/docker.svg',
     imageAlt: 'Docker icon',
@@ -81,8 +81,8 @@ export default [
   },
   {
     name: 'Accessibility',
-    image: 'images/w3c.svg',
-    imageAlt: 'W3c icon',
+    image: 'images/a11y.svg',
+    imageAlt: 'accessibility icon',
   },
   {
     name: 'Optimization',

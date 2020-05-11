@@ -1,14 +1,19 @@
 ---
 title: "Gall & Gall"
+logo: "images/logo-gall-small.png"
 order: 201701
 link: "https://www.gall.nl/smaakprofielen/doe-de-test/"
 short: "Onderhoud en ontwikkeling van de webshop en bouw van de smaakprofielen app."
-tech: "React, Redux, GraphQL, Backbone, Webpack, CSS Modules, Jest, Git."
+tech: "React, Redux, GraphQL, Backbone, Webpack, CSS Modules, Jest, Git, Scrum."
 ---
 
-Gall & Gall is onderdeel van Ahold-Delhaize en marktleider op het gebied van online drankverkoop.  
-In de tijd dat ik hier werkte hadden ze een custom-made webshop met een BackboneJS frontend waar ik aan mee heb gewerkt.  
-Daarnaast heb ik een leuke nieuwe feature mogen bouwen.
+Gall & Gall is marktleider op het gebied van online drankverkoop.  
+Ik werd ingehuurd om de custom webshop met een Backbone/Marionette frontend om te bouwen naar React. Dit werd gefaseerd gedaan via het <em>release early, release often</em> principe.  
+Daarnaast heb ik een leuke nieuwe feature mogen bouwen...
 
-Smaakprofielen is een concept wat jou helpt een lekkere wijn te vinden. Doormiddel van het beantwoorden van simpele vragen, word een algoritme aangestuurd die jou "smaalprofiel" samenstelt. Daar horen dan weer wijnen bij die je direct kan bestellen.  
+![Gall webshop](images/projects/gall01.jpg "Gall webshop")
+
+<strong>Smaakprofielen</strong> is een concept wat je helpt een lekkere wijn te vinden. Doormiddel van het beantwoorden van simpele vragen, word een algoritme aangestuurd die jou "smaalprofiel" samenstelt. Daar horen dan weer wijnen bij die je direct kan bestellen.  
 De code voor smaakprofielen heb ik van de grond af aan opgebouwd, inclusief de build-pipeline, styleguide en code quality tools.
+
+![Smaakprofielen app](images/projects/gall02.jpg "Smaakprofielen app")

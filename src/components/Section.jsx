@@ -5,18 +5,10 @@ export default styled.section`
   margin: 1rem auto;
   padding: 0 1rem;
   max-width: ${(p) => p.theme.maxSectionWidth};
-  text-align: justify;
+  /* text-align: justify; */
 
-  ${mq.md`
-    & {
-      padding: 0 2rem;
-    }
-  `}
-
-  ${mq.lg`
-    & {
-      margin: 2rem auto;
-    }
+  ${mq.lgUp`
+      margin: 3rem auto 2rem;
   `}
 
   /* Clear any floats */

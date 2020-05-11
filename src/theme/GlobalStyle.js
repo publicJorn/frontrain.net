@@ -28,6 +28,11 @@ export default createGlobalStyle`
       content: 'LG';
     }
   `}
+  ${mq.xl`
+    body::before {
+      content: 'XL';
+    }
+  `}
   /* ===== END DEV ===== */
 
   *, ::before, ::after {
@@ -40,11 +45,11 @@ export default createGlobalStyle`
     line-height: 1.8;
   }
 
-  @media (min-width: 420px) {
+  ${mq.mdUp`
     html {
       font-size: 15pt;
     }
-  }
+  `}
 
   body {
     position: relative;
@@ -57,7 +62,16 @@ export default createGlobalStyle`
   }
 
   *:focus {
-    outline: 1px solid rgb(100, 190, 50);
+    outline: 1px solid ${(p) => p.theme.colors.focus};
+  }
+
+  h2 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 16.5pt;
+  }
+
+  h4 {
+    margin-bottom: 1rem;
   }
 
   p {
