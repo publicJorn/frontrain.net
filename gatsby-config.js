@@ -14,9 +14,6 @@ const aliases = getDirectories(path.join(__dirname, 'src')).reduce(
   {},
 )
 
-console.log('ALIASES:')
-console.log(aliases)
-
 module.exports = {
   plugins: [
     'gatsby-plugin-root-import',
