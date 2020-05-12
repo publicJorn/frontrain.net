@@ -4,11 +4,11 @@ import styled from 'styled-components'
 import mq from 'theme/mediaQueries'
 import Section from 'components/Section'
 
-import imgJorn from 'images/me.png'
+import imgJorn from 'images/me-200w.png'
 
 const Image = styled.img`
   float: left;
-  margin: 0 2rem 0 0;
+  margin: 1rem 2rem 1rem 0;
   width: 200px;
   height: 231px;
   max-width: 10rem;
@@ -22,19 +22,12 @@ const Image = styled.img`
   `}
 `
 
-// TODO: Make button with tooltip
 const T = styled.em`
   padding: 0;
   border: none;
-  /* border-bottom: 1px dotted ${(p) => p.theme.colors.brandLightBorder}; */
   font-style: italic;
   white-space: nowrap;
   background: none;
-
-  /* &:focus {
-    outline: none;
-    border-bottom: 1px solid ${(p) => p.theme.colors.focus};
-  } */
 `
 
 export default () => (
