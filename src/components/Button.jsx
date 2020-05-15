@@ -5,6 +5,11 @@ const StyledButton = styled.button`
   padding: 0 0.5rem;
   background: none;
 
+  &:focus {
+    border-color: ${(p) => p.theme.colors.focus};
+    outline: none;
+  }
+
   & > img {
     display: block;
   }

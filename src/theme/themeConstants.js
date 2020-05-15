@@ -15,6 +15,9 @@ export default {
     brandLight: 'rgb(226, 242, 217)',
 
     text: 'rgb(68, 68, 68)',
+    textInactive: 'rgb(120, 118, 121)',
+    fieldBorder: 'rgb(170, 170, 170)',
     link: 'rgb(57, 135, 0)',
+    error: '#ee0303',
   },
 }

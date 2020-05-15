@@ -3,7 +3,7 @@ title: "NRC"
 logo: "images/logo-nrc.png"
 order: 201609
 link: "https://nrc.nl/"
-short: "Ontwikkeling van website- en backoffice componenten. POC voor digitale krant."
+short: "Ontwikkeling van website- en backoffice componenten. PoC voor de digitale krant."
 tech: "Vanilla JS (Ecmascript 6), Sass, React, Webpack, PHP, Git."
 ---
 
