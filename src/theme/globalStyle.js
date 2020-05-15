@@ -5,7 +5,7 @@ import './normalize.css'
 
 export default createGlobalStyle`
   /* ===== DEV ===== */
-  body::before {
+  /* body::before {
     position: fixed;
     top: 0;
     left: 0;
@@ -32,7 +32,7 @@ export default createGlobalStyle`
     body::before {
       content: 'XL';
     }
-  `}
+  `} */
   /* ===== END DEV ===== */
 
   *, ::before, ::after {

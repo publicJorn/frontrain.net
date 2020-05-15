@@ -36,26 +36,13 @@ const ButtonLink = styled.button`
 `
 
 const ContactPortal = (props) => {
-  // Create a hidden form to leverage Netlify e-mail functionality to JSX
-  // `netlify-honeypot` disables captcha TODO: Check
-  const NetlifyForm = () => (
-    <form name="contact" netlify="true" netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-      <textarea name="message"></textarea>
-    </form>
-  )
-
-  return typeof document !== 'undefined' ? (
-    <>
-      <NetlifyForm />
-      {createPortal(<Contact {...props} />, document.querySelector('#portal'))}
-    </>
-  ) : null
+  return typeof document !== 'undefined'
+    ? createPortal(<Contact {...props} />, document.querySelector('#portal'))
+    : null
 }
 
 export default () => {
-  const [showContact, setShowContact] = useState(true)
+  const [showContact, setShowContact] = useState(false)
 
   return (
     <Footer>
@@ -70,6 +57,22 @@ export default () => {
             <ButtonLink onClick={() => setShowContact(!showContact)}>
               contact
             </ButtonLink>
+
+            {/* 
+            Create a hidden form to leverage Netlify e-mail functionality to JSX.
+            `netlify-honeypot` disables captcha
+            */}
+            <form
+              name="contact"
+              data-netlify
+              netlify-honeypot="bot-field"
+              hidden
+            >
+              <input type="text" name="name" />
+              <input type="email" name="email" />
+              <textarea name="message"></textarea>
+            </form>
+
             <ContactPortal
               isVisible={showContact}
               handleClose={() => setShowContact(false)}

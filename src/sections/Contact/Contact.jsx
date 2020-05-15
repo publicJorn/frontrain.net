@@ -3,7 +3,7 @@ import { Formik, Form, Field } from 'formik'
 
 import { Input, Error, Flex, Counter, Success, Failure } from './contact.styles'
 import Message from './Message'
-import Drawer from 'components/Drawer'
+import Drawer from 'components/Drawer/Drawer'
 import Button from 'components/Button'
 
 const encode = (data) => {

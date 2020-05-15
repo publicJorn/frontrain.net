@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Drawer from 'components/Drawer'
+import Drawer from 'components/Drawer/Drawer'
 import UsedTech from 'components/UsedTech'
 
 const Logo = styled.img`
