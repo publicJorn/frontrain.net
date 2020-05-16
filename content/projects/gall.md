@@ -13,7 +13,7 @@ Daarnaast heb ik een leuke nieuwe feature mogen bouwen...
 
 ![Gall webshop](images/projects/gall01.jpg "Gall webshop")
 
-<strong>Smaakprofielen</strong> is een concept wat je helpt een lekkere wijn te vinden. Doormiddel van het beantwoorden van simpele vragen, word een algoritme aangestuurd die jou "smaalprofiel" samenstelt. Daar horen dan weer wijnen bij die je direct kan bestellen.  
+<strong>Smaakprofielen</strong> is een concept wat je helpt een lekkere wijn te vinden. Door middel van het beantwoorden van simpele vragen, wordt een algoritme aangestuurd die jouw "smaakprofiel" samenstelt. Daar horen dan weer wijnen bij die je direct kunt bestellen.  
 De code voor smaakprofielen heb ik van de grond af aan opgebouwd, inclusief de build-pipeline, styleguide en code quality tools.
 
 ![Smaakprofielen app](images/projects/gall02.jpg "Smaakprofielen app")

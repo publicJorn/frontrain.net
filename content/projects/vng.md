@@ -7,11 +7,11 @@ short: "Open source. Front-end ontwikkeling van diverse applicaties binnen de co
 tech: "React, Rest, Styled-Components, Storybook, a11y, Jest (RTL), TestCafé, CI/CD, NPM, Docker, GoLang, Git, Scrum."
 ---
 
-Gemeenten hebben een nieuwe, moderne, gezamenlijke informatievoorziening nodig voor het uitwisselen van gegevens. Hiervoor is de <a href="https://commonground.nl" target="_blank">commonground</a> beweging opgezet. Het "Core" team ontwikkeld diverse applicaties: <a href="https://nlx.io/" target="_blank">NLX</a>,  <a href="https://appstore.commonground.nl/" target="_blank">AppStore</a> en  <a href="https://developer.overheid.nl" target="_blank">developer.overheid.nl</a>. Aan al deze heb ik meegewerkt.
+Gemeenten hebben een nieuwe, moderne, gezamenlijke informatievoorziening nodig voor het uitwisselen van gegevens. Hiervoor is de <a href="https://commonground.nl" target="_blank">commonground</a> beweging opgezet. Het "Core" team ontwikkelt diverse applicaties: <a href="https://nlx.io/" target="_blank">NLX</a>,  <a href="https://appstore.commonground.nl/" target="_blank">AppStore</a> en  <a href="https://developer.overheid.nl" target="_blank">developer.overheid.nl</a>. Aan al deze applicaties heb ik meegewerkt.
 
 ![AppStore](images/projects/vng01.png "AppStore componenten pagina")
 
-De verschillende projecten maken gebruik van gedeelde componenten uit een design system, wat ik heb opgezet samen met een ontwerper. Deze word centraal beheerd en via Node Package Manager als afhankelijkheid ingeladen in elk project.
+De verschillende projecten maken gebruik van gedeelde componenten uit een design system, dat ik heb opgezet samen met een ontwerper. Deze wortd centraal beheerd en via Node Package Manager als afhankelijkheid ingeladen in elk project.
 
 ![Design System](images/projects/vng02.png "Design system")
 
