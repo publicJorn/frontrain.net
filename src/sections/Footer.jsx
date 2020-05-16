@@ -33,6 +33,7 @@ const ButtonLink = styled.button`
   padding: 0;
   border: none;
   text-decoration: underline;
+  background: #fff;
 `
 
 const ContactPortal = (props) => {

@@ -5,6 +5,7 @@ import { Input, Error, Flex, Counter, Success, Failure } from './contact.styles'
 import Message from './Message'
 import Drawer from 'components/Drawer/Drawer'
 import Button from 'components/Button'
+import { thisExpression } from '@babel/types'
 
 const encode = (data) => {
   return Object.keys(data)
@@ -17,7 +18,8 @@ const maxChars = 250
 class Contact extends Component {
   state = {
     charsLeft: maxChars,
-    formSent: false,
+    isSubmitting: false,
+    isFormSent: false,
     formSendError: '',
   }
 
@@ -43,22 +45,38 @@ class Contact extends Component {
     return errors
   }
 
-  handleSubmit = (values) => {
+  handleSubmit = (values, actions) => {
+    this.setState({ isSubmitting: true })
+
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...values }),
     })
-      .then(() => this.setState({ formSent: true, formSendError: '' }))
+      .then(() => this.handleSuccessfulSubmit(actions))
       .catch((formSendError) =>
-        this.setState({ formSent: false, formSendError }),
+        this.setState({ isFormSent: false, formSendError, submitting: false }),
       )
   }
 
+  handleSuccessfulSubmit = ({ resetForm }) => {
+    this.setState({
+      isFormSent: true,
+      formSendError: '',
+      isSubmitting: false,
+    })
+    resetForm()
+  }
+
+  handleDrawerClosing = () => {
+    this.setState({ isSubmitting: false, isFormSent: false, formSendError: '' })
+    this.props.handleClose()
+  }
+
   render() {
-    const { charsLeft, formSent, formSendError } = this.state
+    const { charsLeft, isFormSent, formSendError, isSubmitting } = this.state
     return (
-      <Drawer {...this.props}>
+      <Drawer {...this.props} handleClose={this.handleDrawerClosing}>
         <Drawer.Header>
           <h3>Contact</h3>
         </Drawer.Header>
@@ -89,11 +107,13 @@ class Contact extends Component {
             <Error name="message" component="span" />
 
             <Flex>
-              <Button type="submit">Verstuur</Button>
+              <Button type="submit" disabled={isSubmitting}>
+                Verstuur
+              </Button>
               <Counter>{charsLeft}</Counter>
             </Flex>
 
-            {formSent && (
+            {isFormSent && (
               <Success>
                 Formulier verstuurd, ik neem spoedig contact met je op.
               </Success>
