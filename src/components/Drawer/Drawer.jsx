@@ -19,7 +19,6 @@ import {
 
 const Content = styled.div`
   max-width: calc(${(p) => p.theme.maxSectionWidth} / 2);
-  text-align: justify;
 `
 
 const drawerContext = createContext()
