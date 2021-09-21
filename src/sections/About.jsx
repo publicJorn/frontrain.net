@@ -47,8 +47,7 @@ export default () => (
     </p>
     <p>
       Ik ben inzetbaar als <T>frontend architect</T>,{' '}
-      <T>javascript developer (es6+/react)</T>, <T>app developer (flutter)</T>{' '}
-      en <T>consultant/trainer</T>.
+      <T>javascript developer (es6+/react)</T> en <T>consultant/trainer</T>.
     </p>
   </Section>
 )
