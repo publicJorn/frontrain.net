@@ -24,11 +24,11 @@ export default [
     image: 'images/nodejs.svg',
     imageAlt: 'NodeJS icon',
   },
-  {
-    name: 'Flutter',
-    image: 'images/flutter.svg',
-    imageAlt: 'Flutter icon',
-  },
+  // {
+  //   name: 'Flutter',
+  //   image: 'images/flutter.svg',
+  //   imageAlt: 'Flutter icon',
+  // },
   {
     name: 'React',
     image: 'images/react.svg',
