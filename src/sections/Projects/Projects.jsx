@@ -14,6 +14,15 @@ const ProjectsRow = styled(Row)`
   `}
 `
 
+export const PROJECTS_HTML_ID = 'projects'
+
+export const focusFirstProject = () => {
+  document
+    .querySelector(`#${PROJECTS_HTML_ID}`)
+    .parentElement.querySelector('button')
+    .focus()
+}
+
 export default () => {
   const {
     allMarkdownRemark: { edges },
@@ -21,7 +30,7 @@ export default () => {
 
   return (
     <Section>
-      <SectionTitle>Projecten</SectionTitle>
+      <SectionTitle id={PROJECTS_HTML_ID}>Projecten</SectionTitle>
       <p>Hier een selectie van projecten waar ik aan heb gewerkt.</p>
 
       <ProjectsRow>

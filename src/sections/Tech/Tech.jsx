@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import techStack from './techStack'
 import Section from 'components/Section'
 import SectionTitle from 'components/SectionTitle'
+import { PROJECTS_HTML_ID, focusFirstProject } from '../Projects/Projects'
 import TechItem, { itemMinWidth } from './TechItem'
 
 const TechList = styled.ul`
@@ -31,18 +32,46 @@ const TechList = styled.ul`
   margin: 2rem auto -1rem; /* Negate last row items' padding */
 `
 
-export default () => (
-  <Section>
-    <SectionTitle>Tech stack</SectionTitle>
-    <p>
-      Elk project is bijzonder en heeft zijn eigen benodigdheden. Hieronder een
-      aantal methodes en technieken die ik regelmatig toepas.
-    </p>
+const SkipLink = styled.a`
+  -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  box-sizing: border-box;
+  position: absolute;
+  margin: 0 0 0 0.5rem;
+  padding: 0;
 
-    <TechList>
-      {techStack.map((tech) => (
-        <TechItem key={tech.name} tech={tech} />
-      ))}
-    </TechList>
-  </Section>
-)
+  &:focus {
+    -webkit-clip-path: none;
+    clip-path: none;
+  }
+`
+
+export default () => {
+  const [showFigCaptions, setShowFigCaptions] = useState(false)
+
+  const showNames = (evt) => {
+    evt.preventDefault()
+    setShowFigCaptions(!showFigCaptions)
+  }
+
+  return (
+    <Section>
+      <SectionTitle>Tech stack</SectionTitle>
+      <p>
+        Elk project is bijzonder en heeft zijn eigen benodigdheden. Hieronder
+        een aantal methodes en technieken die ik regelmatig toepas.
+      </p>
+
+      <button onClick={showNames}>Toon alle tech titels</button>
+      <SkipLink href={`#${PROJECTS_HTML_ID}`} onClick={focusFirstProject}>
+        Sla over
+      </SkipLink>
+
+      <TechList className={showFigCaptions ? 'show-figcaption' : ''}>
+        {techStack.map((tech) => (
+          <TechItem key={tech.name} tech={tech} />
+        ))}
+      </TechList>
+    </Section>
+  )
+}

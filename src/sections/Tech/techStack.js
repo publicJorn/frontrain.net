@@ -35,24 +35,34 @@ export default [
     imageAlt: 'React icon',
   },
   {
+    name: 'React-Query',
+    image: 'images/react-query.svg',
+    imageAlt: 'React-Query icon',
+  },
+  {
     name: 'MobX',
     image: 'images/mobx.svg',
     imageAlt: 'MobX icon',
   },
   {
-    name: 'Redux',
-    image: 'images/redux.svg',
-    imageAlt: 'Redux icon',
+    name: 'GraphQl',
+    image: 'images/graphql.svg',
+    imageAlt: 'GraphQl icon',
   },
+  // {
+  //   name: 'Redux',
+  //   image: 'images/redux.svg',
+  //   imageAlt: 'Redux icon',
+  // },
   {
     name: 'Jest',
     image: 'images/jest.svg',
     imageAlt: 'Jest icon',
   },
   {
-    name: 'GraphQl',
-    image: 'images/graphql.svg',
-    imageAlt: 'GraphQl icon',
+    name: 'Testing Library',
+    image: 'images/testing-library.png',
+    imageAlt: 'Testing-Library icon',
   },
   {
     name: 'Webpack',

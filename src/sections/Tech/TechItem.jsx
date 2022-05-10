@@ -33,7 +33,8 @@ const FocusElement = styled.button`
   }
 
   &:focus,
-  &:hover {
+  &:hover,
+  .show-figcaption & {
     outline: none;
     figcaption {
       visibility: visible;
