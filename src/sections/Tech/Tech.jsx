@@ -33,16 +33,13 @@ const TechList = styled.ul`
 `
 
 const SkipLink = styled.a`
-  -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
-  clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  transform: scale(0);
   box-sizing: border-box;
   position: absolute;
   margin: 0 0 0 0.5rem;
-  padding: 0;
 
   &:focus {
-    -webkit-clip-path: none;
-    clip-path: none;
+    transform: scale(1);
   }
 `
 
@@ -63,7 +60,11 @@ export default () => {
       </p>
 
       <button onClick={showNames}>Toon alle tech titels</button>
-      <SkipLink href={`#${PROJECTS_HTML_ID}`} onClick={focusFirstProject}>
+      <SkipLink
+        href={`#${PROJECTS_HTML_ID}`}
+        onClick={focusFirstProject}
+        tabIndex="0"
+      >
         Sla over
       </SkipLink>
 
